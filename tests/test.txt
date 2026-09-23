@@ -1,0 +1,53 @@
+[-n]
+python3 main.py -n logG3.txt 
+python3 main.py -n logG3.txt 1 1
+python3 main.py -n logG3.txt 2 3
+[ERROR]
+python3 main.py -n
+python3 main.py -n logG3.txt 2
+python3 main.py -n logG3.txt 3 4
+python3 main.py -n log.txt
+
+[-sphone]
+python3 main.py -sphone 123456789 logG3.txt
+python3 main.py -sphone 693677592 logG3.txt
+python3 main.py -sphone 174751302 logG3.txt
+[ERROR]
+python3 main.py -sphone 15523 logG3.txt
+python3 main.py -sphone logG3.txt
+python3 main.py -sphone 
+python3 main.py -sphone 693677592
+
+[-stime]
+python3 main.py -stime 2020-06-22 23:23 2020-06-22 23:23 logG3.txt
+python3 main.py -stime 2019-02-18 00:19 November 28, 2023 8:44 AM logG3.txt
+python3 main.py -stime 09:12:56 05/08/0918 April 24, 2020 5:16 AM logG3.txt
+[ERROR]
+python3 main.py -stime 2020-06-22 23:23 2020-06-22 23 logG3.txt
+python3 main.py -stime 2019-02-30 00:19 November 28, 2023 8:44 AM logG3.txt
+python3 main.py -stime April 24, 2020 5:16 AM 09:12:56 05/08/0918 logG3.txt
+
+
+[-snif]
+python3 main.py -snif X2229423X logG3.txt
+python3 main.py -snif 29063958P logG3.txt
+[ERROR]
+python3 main.py -snif 1234W logG3.txt
+python3 main.py -snif 44444444X logG3.txt
+python3 main.py -snif Z logG3
+
+[-slocation]
+python3 main.py -slocation -15.847566204432525, 25.737288846644418 3000 logG3.txt
+python3 main.py -slocation 42° 17\' 49.1519\" N, 84° 10\' 44.3508\" E 500 logG3.txt
+python3 main.py -slocation 0790058.4419N0704348.9419W 40000 logG3.txt
+[ERROR]
+python3 main.py -slocation -15.847566204432525, 25.737288846644418  logG3.txt
+python3 main.py -slocation 1790058.4419N0704348.9419W 40000 logG3.txt
+
+[-generate]
+python3 main.py -generate nombre.txt 40
+python3 main.py -generate nombre.txt 500
+[ERROR]
+python3 main.py -generate 500 200 33
+python3 main.py -generate 7 nombre.txt
+python3 main.py -generate nombre.txt 81 nombre.txt
